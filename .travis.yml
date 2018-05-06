@@ -44,4 +44,4 @@ cache:
 # - adb shell input keyevent 82 &
 
 script:
- - "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
+./gradlew build connectedCheck
