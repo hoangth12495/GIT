@@ -53,7 +53,7 @@ before_script:
 before_install:
   - chmod +x gradlew
 script:
- - ./gradlew clean build connectedCheck -PdisablePreDex --stacktrace
+- ./gradlew clean test build
      # gradle build connectedCheck
 # before_install:
 #           - mkdir "$ANDROID_HOME/licenses" || true
