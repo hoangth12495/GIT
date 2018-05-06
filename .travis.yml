@@ -41,19 +41,20 @@ licenses:
  - android-sdk-license-.+
  - google-gdk-license-.+
 
-before_script:
-    - mkdir -p "$ANDROID_HOME/licenses"
-    - cp ./google-licenses/* "$ANDROID_HOME/licenses/"
+# before_script:
+#     - mkdir -p "$ANDROID_HOME/licenses"
+#     - cp ./google-licenses/* "$ANDROID_HOME/licenses/"
 # before_script:
 #   # - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
 #   - emulator -avd test -no-skin -no-audio -no-window &
 #   - android-wait-for-emulator
 #   - adb shell input keyevent 82 &
 
-before_install:
-  - chmod +x gradlew
+
+  
 script:
-- ./gradlew clean test build
+  - chmod +x gradlew
+  - ./gradlew clean test build
      # gradle build connectedCheck
 # before_install:
 #           - mkdir "$ANDROID_HOME/licenses" || true
